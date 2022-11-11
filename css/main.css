@@ -1,0 +1,199 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.hidden { display: none; }
+
+html, body { height: 100% }
+
+body { 
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  background-image: url('../images/txt.png');
+  
+  
+    
+}
+
+/* style the header */
+header{
+    background-color: rgb(130, 68, 47);
+    position: sticky;
+    top: 0;
+    text-align: center; 
+}
+
+#main-logo { width: 300px; padding: 10px 0; }
+
+/* main section styles */
+#character-nav { 
+    text-align: center; 
+    background-color: rgb(101, 96, 96); 
+
+    /* add a background image to the nav element */
+    background-image: url('../images/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-blend-mode: overlay;
+    
+}
+
+.characters { list-style-type: none; }
+
+
+
+.characters li {
+    position: relative;
+     display: inline-block; 
+     height: 220px;
+     margin: 10px 8px;
+
+     background-color: black;
+     text-align: left; 
+
+     cursor: pointer;
+    }
+
+ .characters li:hover .red-bumper { height: 70px; }    
+
+    .characters li h5 {
+        position: relative;
+        padding: 12px 8px;
+        color: white;
+
+        z-index: 50;
+    }
+
+.characters li a {text-decoration: none;}
+.characters li img { width: 150px; cursor: pointer;}
+
+.sprite {
+    width: 150px;
+    height: 150px;
+
+    background-image: url('../images/all.jpg');
+}
+.sprite:hover { background-position-y: -150px !important; }
+
+#orgdun { background-position: -150px 0; }
+#bracken { background-position: -300px 0; }
+#craptree { background-position: -450px 0; }
+#rebecca { background-position: -600px 0; }
+#grace { background-position: -750px 0; }
+
+.red-bumper { 
+    position: absolute;
+    width: 100%;
+    height:  6px; 
+    background-color: rgb(92, 134, 169);
+
+    transition: all 0.5s ease;
+
+}
+
+article { padding: 20px; }
+
+article h3 {
+    font-size:  2em;
+    text-align: center;
+    margin-bottom:  14px;
+}
+
+article p {
+    width: 80%;
+    font-size: 18px;
+    line-height:  1.2;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* style the footer */
+footer{
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.sticky_footer {
+    position: sticky;
+    top: 100%;
+
+    height: 80px;
+    background-color: rgb(38, 40, 43);
+}
+
+/*lightbox styles*/
+.lightbox{
+    display: none;
+    width: 100vw; /*view port width = width of the browser window */
+    height: 100vh; /*view port height = width of the browser window */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    background-repeat: no-repeat;
+
+    background-position: 40px bottom;
+    background-size: 55vh;
+
+    z-index: 5000;
+}
+
+
+.lb_close { 
+    color: white;
+    font-size: 2em;
+
+    text-decoration: none;
+
+    position: relative;
+    top: 12px;
+    left: 96%;
+    font-weight: bold;
+}
+.lb_close:hover { opacity: 0.5;}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+.lb_text, .lb_heading { text-align: left;}
+
+.lb_text {
+    line-height: 1.6;
+    margin-left: 0;
+    padding-top: 2em;
+}
+
+#lightbox {
+    background-image: url('../images/murdoch.png');
+}
+#lightBox2 {
+    background-image: url('../images/ogdun.png');
+}
+
+#lightBox3 {
+    background-image: url('../images/braken2.png');
+    
+}
+          
+#lightBox4 {
+    background-image: url('../images/craptree.png');
+}
+
+#lightBox5 {
+    background-image: url('../images/rebeccabig.png');
+}
+#lightBox6 {
+    background-image: url('../images/gracebig.png');
+}
+/* toggle the lightbox on */
+.lightbox:target { display:  block;}
+/* .lightbox#lightbox { display:  block;} */ 
